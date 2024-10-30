@@ -1,0 +1,13 @@
+.main {
+  width: 90%;
+  min-height: 1100px;
+
+  margin: 0 auto;
+  background: url(./image/main.webp);
+  background-size: cover;
+}
+
+div {
+  background: url(./image/block.webp);
+  background-size: cover;
+}

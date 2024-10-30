@@ -1,0 +1,221 @@
+body {
+  font-size: 18pt;
+}
+
+/* КАВЫЧКИ */
+
+.q1 {
+  quotes: "«" "»" "„" "“";
+}
+.q2 {
+  quotes: "„" "“";
+}
+.q3 {
+  quotes: "‘" "’";
+}
+.q4 {
+  quotes: '"' '"';
+}
+.q5 {
+  quotes: "»" "«";
+}
+.q6 {
+  quotes: "»" "»";
+}
+.q7 {
+  quotes: "“" "”";
+}
+.q8 {
+  quotes: "„" "”";
+}
+.q9 {
+  quotes: "”" "”";
+}
+
+/* ПЕРВЫЙ БЛОК */
+
+.first-group-block {
+  margin-left: 100px;
+}
+.first-group-block div:first-child {
+  margin-left: 0px;
+}
+.first-group-block div {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.first-block {
+  height: 300px;
+  overflow-y: auto;
+}
+.first-block div {
+  width: 300px;
+  vertical-align: middle;
+}
+.first-block div span {
+  color: white;
+  text-shadow: black 2px 2px;
+  display: block;
+  border-bottom: solid 3px black;
+  background-clip: content-box;
+  padding-bottom: 5px;
+  margin-bottom: 7px;
+}
+.first-block div::first-letter {
+  font-size: 27pt;
+  color: rgb(150, 0, 0);
+}
+
+.first-block div::after {
+  color: white;
+  text-shadow: #000000aa 1px 1px,  #00000099 2px 2px, #00000099 3px 3px;
+  line-height: 2;
+  display: block;
+}
+.first-block div:nth-child(1)::after {
+  content: "Хитроумные азиаты, впрочем, изобрели еще несколько типов кавычек, европейцам неизвестных.";
+  background: red;
+}
+.first-block div:nth-child(2)::after {
+  content: "Разве что в текстовых процессорах — они вставляют кавычки должного вида сами, автоматически, если иное не указано в опциях.";
+  background: orange;
+}
+.first-block div:nth-child(3)::after {
+  content: "Примечательно, пожалуй, то, что даже обычные кавычки, выглядящие как обращенные навстречу друг другу пары поднятых вверх запятых, с тем же успехом могут выглядеть и как обращенные друг к другу поднятые вверх круглые елочки.";
+  background: green;
+}
+
+/* ВТОРОЙ БЛОК */
+
+.second-block {
+  width: 1400px;
+  margin-top: 20px;
+}
+.second-block div {
+  width: 300px;
+  height: 300px;
+  overflow-y: auto;
+}
+.second-block div span {
+  color: white;
+  text-shadow: black 2px 2px;
+  display: block;
+  border-top: solid 3px black;
+  background-clip: content-box;
+  padding-top: 5px;
+  margin-top: 7px;
+}
+
+.second-block div span::first-line {
+  font-size: 32pt;
+  background-color: rgb(150, 0, 0);;
+}
+/* ПРОКЛЯТО */
+.fix-me-pls {
+  font-size: 32pt;
+  background-color: rgb(150, 0, 0);;
+}
+
+.second-block div::before {
+  color: white;
+  font-style: italic;
+  display: block;
+}
+.second-block div:nth-child(1)::before {
+  content: "При книгопечатании тоже сначала по-всякому крутили запятые, но постепенно история развития книгопечатных шрифтов привела к тому, что стали разрабатываться свои собственные печатные знаки для каждой задачи.";
+  background: red;
+}
+.second-block div:nth-child(2)::before {
+  content: "Двойная симметричная кавычка нашла в русском языке и ещё одно применение — ей иногда заменяли твёрдый знак.";
+  background: orange;
+}
+.second-block div:nth-child(3)::before {
+  content: "В 20-х годах прошлого века такое использование кавычки имело место и в газетах и прочих печатных изданиях.";
+  background: green;
+}
+
+/* ТРЕТИЙ БЛОК */
+
+.third-block {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  box-shadow: 12px 12px 5px teal;
+}
+.third-block div:nth-child(1) {
+  margin-right: 4%;
+}
+.third-block div:nth-child(2) {
+  margin-left: 0%;
+}
+.third-block div {
+  vertical-align: text-top;
+  color: white;
+  text-shadow: black 2px 2px;
+  display: inline-block;
+  width: 40%;
+  padding: 2.5%;
+  margin: 2%;
+}
+.third-block div p {
+  text-align: center;
+  display: list-item;
+  list-style-position: inside;
+}
+.third-block div:nth-child(1) p::marker {
+  content: "Δ ";
+}
+.third-block div:nth-child(2) p::marker {
+  content: "δ ";
+}
+.first-group-block div span q::selection,
+.first-group-block div span::selection {
+  color: lime;
+  background-color: black;
+}
+
+/* ФОНЫ */
+
+body, .first-block, .first-block *, .second-block, .second-block *, .third-block, .third-block * {
+  background-size: cover;
+}
+
+body {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/amber-l-decf85d5adacd1bfdf0d16ac226a2026ac9ad9ac.webp);
+}
+
+.first-block {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/amber-d-1938c12fcd42b0c754886904c3465750f249831e.webp);
+}
+.first-block div:nth-child(1) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/legacy-l-8a9f52f01eddc6efcc8a6c9b9af572836eaff029.webp);
+}
+.first-block div:nth-child(2) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/legacy-d-c3d9d26ac9e75d92bd87ae3d7d4af8a75905bbdb.webp);
+}
+.first-block div:nth-child(3) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/lcd-blue-l-2053018ede7cf1177fe2c5941f3fe1887bf4d360.webp);  
+}
+
+.second-block {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/blobs-l-b49caff1a7941d98b60902da64956ad85dfbe4f9.webp);
+}
+.second-block div:nth-child(1) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/adwaita-l-e181a39df30ba6b532a611d1bdf8de63aea945d7.webp);
+}
+.second-block div:nth-child(2) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/adwaita-d-dd1106a0025de2959a99db242354ac9597d600fe.webp);
+}
+.second-block div:nth-child(3) span {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/drool-l-95f4c6657e51f40d193e1c5ba6629216d8e38d5b.webp);
+}
+
+.third-block {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/drool-d-b1608556d649b5b943136ecc0df0fe1bc7ff644f.webp);
+}
+.third-block div:nth-child(1) {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/neogeo-l-fe3b766a6b7759054915bfb49dd0f4db63a4346c.webp);
+}
+.third-block div:nth-child(2) {
+  background-image: url(https://zebreus.github.io/all-gnome-backgrounds/thumbs500/pills-l-08d0220c53c21b9cdb4981137021372e1d733fe2.webp);
+}
