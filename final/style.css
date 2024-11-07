@@ -94,16 +94,28 @@ nav {
   align-items: stretch;
   gap: 1rem;
 
-  a {
-    text-decoration: none;
-    color: var(--fg-default)
-  }
-
   a:nth-child(1) {
     margin-top: 1rem;
+    top: 1rem;
+  }
+  
+  a:nth-child(2) {
+    top: 5rem;
+  }
+
+  a:nth-child(3) {
+    top: 9rem;
+  }
+
+  a:nth-child(4) {
+    top: 13rem;
   }
 
   a {
+    position: sticky;
+    text-decoration: none;
+    color: var(--fg-default);
+
     margin: 0 1rem;
     padding: 1rem;
     text-align: center;
@@ -147,6 +159,31 @@ main {
 p,
 li {
   color: var(--fg-dark);
+}
+
+.main-nav {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.main-nav-left {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 9px;
+  background: var(--bg-light);
+  float: left;
+  color: var(--fg-default);
+  text-decoration: none;
+}
+
+.main-nav-right {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 9px;
+  background: var(--bg-light);
+  float: right;
+  color: var(--fg-default);
+  text-decoration: none;
 }
 
 /***************************

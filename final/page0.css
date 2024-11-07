@@ -23,6 +23,15 @@ main div:nth-child(1) td:nth-child(odd) {
   color: var(--fg-default);
 }
 
+main > div:nth-child(2) img:nth-of-type(1) {
+  margin-bottom: 1rem;
+}
+
+main > div:nth-child(2) img {
+  width: 40rem;
+  display: block;
+}
+
 /* Образовательная программа */
 
 .container-edu-program {
@@ -195,7 +204,7 @@ main div:nth-child(1) td:nth-child(odd) {
 
 /* О предмете химия */
 
-main>div:nth-child(5)>div:nth-of-type(1) {
+main>div:nth-child(6)>div:nth-of-type(1) {
   width: 20rem;
 
   img {
@@ -203,7 +212,7 @@ main>div:nth-child(5)>div:nth-of-type(1) {
   }
 }
 
-main>div:nth-child(5)>div:nth-of-type(1)::before {
+main>div:nth-child(6)>div:nth-of-type(1)::before {
   position: absolute;
   content: '';
   background: repeating-linear-gradient(45deg,
@@ -215,10 +224,15 @@ main>div:nth-child(5)>div:nth-of-type(1)::before {
   height: calc(1280/720 * 20rem);
 }
 
-main>div:nth-child(5)>details {
+main>div:nth-child(6)>details {
   margin-top: 1rem;
   cursor: pointer;
   padding: 1rem;
+  background: var(--bg-light);
   border: 1px solid var(--border);
   color: var(--fg-default);
+}
+
+.main-nav-left {
+  display: none;
 }
