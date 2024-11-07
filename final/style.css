@@ -9,11 +9,19 @@
 body {
   margin: 0;
 
-  color: var(--fg-default);
+  color: var(--fg-dark);
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--fg-default);
 }
 
 .container {
@@ -118,20 +126,27 @@ main {
   padding: 2rem;
 
   h1,
-  h2 {
+  h2,
+  h3,
+  h4,
+  h5 {
     margin: 1rem 0px 1rem 0px;
   }
 }
 
 /* Заголовки и текст*/
 
-main div:nth-child(1) h1 {
-  margin-top: 0px;
+.fg-default {
+  color: var(--fg-default);
+}
+
+.fg-dark {
+  color: var(--fg-dark);
 }
 
 p,
 li {
-  color: var(--fg-dark)
+  color: var(--fg-dark);
 }
 
 /***************************
@@ -152,14 +167,14 @@ footer>div:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  margin-left: 2%;
+  margin-left: 1rem;
 }
 
 footer>div:nth-child(2) {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-right: 2%;
+  margin-right: 1rem;
 }
 
 footer a {

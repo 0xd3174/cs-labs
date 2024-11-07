@@ -1,7 +1,11 @@
 /***************************
  *********** Тело **********
  ***************************/
- 
+
+main div:nth-child(1) h1 {
+  margin-top: 0px;
+}
+
 /* Таблица */
 
 main div:nth-child(1) table,
@@ -16,10 +20,7 @@ main div:nth-child(1) td {
 
 main div:nth-child(1) td:nth-child(odd) {
   width: 28%;
-}
-
-main div:nth-child(1) td:nth-child(even) {
-  color: var(--fg-dark)
+  color: var(--fg-default);
 }
 
 /* Образовательная программа */
@@ -133,8 +134,11 @@ main div:nth-child(1) td:nth-child(even) {
   border-color: #f7a600;
 }
 
+/* Программа обучения */
+
 .edu-program-list {
   display: flex;
+  color: var(--fg-default);
   flex-direction: column;
   gap: 1rem;
 }
@@ -147,6 +151,10 @@ main div:nth-child(1) td:nth-child(even) {
     height: 1rem;
     border-radius: 0 9px;
     margin-right: 0.5rem;
+  }
+
+  >div:nth-child(even) {
+    color: var(--fg-dark);
   }
 
   >div:nth-child(1) {
@@ -185,26 +193,32 @@ main div:nth-child(1) td:nth-child(even) {
   }
 }
 
-main>div:nth-child(5) {
-  >div:nth-of-type(1) {
-    width: 30%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+/* О предмете химия */
 
-    img {
-      width: 100%;
-      grid-area: 1 / 1 / 2 / 2;
-    }
+main>div:nth-child(5)>div:nth-of-type(1) {
+  width: 20rem;
 
-    >div {
-      width: 100%;
-      grid-area: 1 / 1 / 2 / 2;
-      background: repeating-linear-gradient(45deg,
-          rgba(255, 192, 203, 0.5) 0px,
-          rgba(255, 192, 203, 0.5) 10px,
-          rgba(255, 255, 255, 0.5) 10px,
-          rgba(255, 255, 255, 0.5) 20px);
-    }
+  img {
+    width: 100%;
   }
+}
+
+main>div:nth-child(5)>div:nth-of-type(1)::before {
+  position: absolute;
+  content: '';
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 192, 203, 0.5) 0px,
+      rgba(255, 192, 203, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 10px,
+      rgba(255, 255, 255, 0.5) 20px);
+  width: 20rem;
+  height: calc(1280/720 * 20rem);
+}
+
+main>div:nth-child(5)>details {
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  color: var(--fg-default);
 }
